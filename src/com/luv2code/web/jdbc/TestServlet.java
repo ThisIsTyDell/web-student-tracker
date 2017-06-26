@@ -40,6 +40,13 @@ public class TestServlet extends HttpServlet {
 		
 		try {
 			myConn = dataSource.getConnection();
+			
+			// Step 3: Create SQL statements
+			String sql = "select * from student";
+			myStmt = myConn.createStatement();
+			
+			// Step 4: Execute SQL query
+			myRs = myStmt.executeQuery(sql);
 		}
 		catch (Exception exc) {
 			exc.printStackTrace();
