@@ -111,6 +111,7 @@ public class StudentDbUtil {
 		}
 		finally {
 			// clean up JDBC objects
+			close(myConn, myStmt, null);
 		}
 		
 	}
