@@ -35,12 +35,16 @@
 							<td><input type="text" name="email" /></td>
 						</tr>
 						<tr>
-							<td><label></label></td>
+							<td></td>
 							<td><input type="submit" value="Save" class="save" /></td>
 						</tr>
 					</tbody>
 				</table>
 			</form>
+			
+			<div style="clear: both;"></div>
+			
+			<p><a href="StudentControllerServlet">Back to List</a>
 		</div>
 	
 	</body>
