@@ -25,7 +25,6 @@ public class StudentDbUtil {
 		Statement myStmt = null;
 		ResultSet myRs = null;
 		
-		
 		try {
 			// get a connection
 			myConn = dataSource.getConnection();
@@ -40,7 +39,7 @@ public class StudentDbUtil {
 			
 			// process result set
 			while (myRs.next()) {
-				
+	
 				// retrieve data from result set row
 				int id = myRs.getInt("id");
 				String firstName = myRs.getString("first_name");
@@ -60,7 +59,6 @@ public class StudentDbUtil {
 			// close JDBC objects
 			close(myConn, myStmt, myRs);
 		}
-		
 	}
 
 	private void close(Connection myConn, Statement myStmt, ResultSet myRs) {
@@ -81,7 +79,6 @@ public class StudentDbUtil {
 		catch(Exception exc) {
 			exc.printStackTrace();
 		}
-		
 	}
 
 	public void addStudent(Student theStudent) throws Exception {
@@ -112,6 +109,5 @@ public class StudentDbUtil {
 			// clean up JDBC objects
 			close(myConn, myStmt, null);
 		}
-		
 	}
 }
