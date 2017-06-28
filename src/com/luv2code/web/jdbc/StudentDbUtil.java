@@ -16,6 +16,10 @@ public class StudentDbUtil {
 		
 		List<Student> students = new ArrayList<>();
 		
+		Connection myConn = null;
+		Statement myStmt = null;
+		ResultSet myRs = null;
+		
 		return students;
 	}
 }
