@@ -6,7 +6,11 @@
 	</head>
 
 	<body>
-
+		
+		<%
+			// get the students from the request object (sent by servlet)
+			List<Student> theStudents = (List<Student>) request.getAttribute("STUDENT_LIST");
+		%>
 
 	</body>
 </html>
