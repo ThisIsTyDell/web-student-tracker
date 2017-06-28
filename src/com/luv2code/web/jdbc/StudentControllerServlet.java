@@ -56,9 +56,11 @@ public class StudentControllerServlet extends HttpServlet {
 				case "LIST":
 					listStudents(request, response);
 					break;
+					
 				case "ADD":
 					addStudent(request, response);
 					break;
+					
 				default:
 					listStudents(request, response);
 			}
