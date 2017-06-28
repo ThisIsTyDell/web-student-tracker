@@ -47,6 +47,7 @@ public class StudentDbUtil {
 				String email = myRs.getString("email");
 				
 				// create new student object
+				Student tempStudent = new Student(id,firstName, lastName, email);
 				
 				// add it to the list of students
 			}
