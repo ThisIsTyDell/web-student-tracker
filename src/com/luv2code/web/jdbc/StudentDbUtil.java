@@ -50,6 +50,7 @@ public class StudentDbUtil {
 				Student tempStudent = new Student(id,firstName, lastName, email);
 				
 				// add it to the list of students
+				students.add(tempStudent);
 			}
 			
 			return students;
