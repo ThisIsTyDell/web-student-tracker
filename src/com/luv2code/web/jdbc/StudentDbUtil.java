@@ -56,7 +56,29 @@ public class StudentDbUtil {
 			return students;
 		}
 		finally {
+			// close JDBC objects
+			close(myConn, myStmt, myRs);
+		}
+		
+	}
+
+	private void close(Connection myConn, Statement myStmt, ResultSet myRs) {
+		
+		try {
+			if (myRs != null) {
+				myRs.close();
+			}
 			
+			if (myStmt != null) {
+				myStmt.close();
+			}
+			
+			if (myConn != null) {
+				myConn.close();
+			}
+		}
+		catch(Exception exc) {
+			exc.printStackTrace();
 		}
 		
 	}
