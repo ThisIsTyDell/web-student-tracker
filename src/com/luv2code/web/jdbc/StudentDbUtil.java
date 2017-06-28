@@ -29,6 +29,11 @@ public class StudentDbUtil {
 			// get a connection
 			myConn = dataSource.getConnection();
 			
+			// create sql statement
+			String sql = "select * from student order by last_name";
+			
+			myStmt = myConn.createStatement();
+			
 			return students;
 		}
 		finally {
