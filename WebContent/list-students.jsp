@@ -10,6 +10,23 @@
 		List<Student> theStudents = (List<Student>) request.getAttribute("STUDENT_LIST");
 	%>
 	<body>
-		<%= theStudents %>	
+		<div id="wrapper">
+			<div id="header">
+				<h2>FooBar University</h2>
+			</div>
+		</div>
+		
+		<div id="container">
+			<div id="content">
+				<table>
+					<tr>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Email</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+		
 	</body>
 </html>
