@@ -24,8 +24,15 @@ public class StudentControllerServlet extends HttpServlet {
 	
 	@Override
 	public void init() throws ServletException {
-		// TODO Auto-generated method stub
 		super.init();
+		
+		// create our student db util ... and pass in the conn pool / datasource
+		try {
+			studentDbUtil = new StudentDbUtil(dataSource);
+		}
+		catch (Exception exc) {
+			throw new ServletException(exc);
+		}
 	}
 
 
