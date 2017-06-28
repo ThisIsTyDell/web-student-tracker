@@ -34,6 +34,9 @@ public class StudentDbUtil {
 			
 			myStmt = myConn.createStatement();
 			
+			// execute query
+			myRs = myStmt.executeQuery(sql);
+			
 			return students;
 		}
 		finally {
