@@ -74,6 +74,23 @@ public class StudentControllerServlet extends HttpServlet {
 		
 	}
 
+	private void addStudent(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		
+		// read student info from form data
+		String firstName = request.getParameter("firstName");
+		String lastName = request.getParameter("lastName");
+		String email = request.getParameter("email");
+		
+		// create a new student object
+		Student theStudent = new Student(firstName, lastName, email);
+		
+		// add the student to the database
+		studentDbUtil.addStudent(theStudent);
+		
+		// send back to main page (the student list)
+		listStudents(request, response);
+	}
+
 	private void listStudents(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
 		// get students from db util
