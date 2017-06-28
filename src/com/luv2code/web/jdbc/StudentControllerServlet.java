@@ -1,6 +1,7 @@
 package com.luv2code.web.jdbc;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.annotation.Resource;
 import javax.servlet.ServletException;
@@ -47,6 +48,8 @@ public class StudentControllerServlet extends HttpServlet {
 
 	private void listStudents(HttpServletRequest request, HttpServletResponse response) {
 		
+		// get students from db util
+		List<Student> students = studentDbUtil.getStudents();
 		
 	}
 
