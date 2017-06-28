@@ -21,6 +21,16 @@ public class StudentControllerServlet extends HttpServlet {
 	
 	@Resource(name="jdbc/web_student_tracker")
 	private DataSource dataSource;
+	
+	@Override
+	public void init() throws ServletException {
+		// TODO Auto-generated method stub
+		super.init();
+	}
+
+
+
+
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
