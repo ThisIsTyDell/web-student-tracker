@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Add Student</title>
+	<head>
+		<title>Add Student</title>
+		
+		<link type="text/css" rel="stylesheet" href="css/style.css">
+		<link type="text/css" rel="stylesheet" href="css/add-student-style.css">
+	</head>
+	<body>
+		
+		<div id="wrapper">
+			<div id="header"><a>
+				<h2>FooBar University</h2>
+			</div>
+		</div>
+		
+		<div id="container">
+			<h3>Add Student</h3>
+			
+			<form action="StudentControllerServlet" method="GET">
+				<input type="hidden" name="command" value="ADD" />
+				
+				<table>
+					<tbody>
+						<tr>
+							<td><label>First name:</label></td>
+							<td><input type="text" name="firstName" /></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
 	
-	<link type="text/css" rel="stylesheet" href="css/style.css">
-	<link type="text/css" rel="stylesheet" href="css/add-student-style.css">
-</head>
-<body>
-	
-	
-
-</body>
+	</body>
 
 </html>
