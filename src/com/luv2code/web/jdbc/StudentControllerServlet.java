@@ -42,12 +42,17 @@ public class StudentControllerServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		// list the students ... in MVC fashion
-		listStudents(request, response);
+		try {
+			// list the students ... in MVC fashion
+			listStudents(request, response);
+		}
+		catch (Exception exc) {
+			throw new ServletException(exc);
+		}
 		
 	}
 
-	private void listStudents(HttpServletRequest request, HttpServletResponse response) {
+	private void listStudents(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
 		// get students from db util
 		List<Student> students = studentDbUtil.getStudents();
