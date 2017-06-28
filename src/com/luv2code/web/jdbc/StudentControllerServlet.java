@@ -51,6 +51,9 @@ public class StudentControllerServlet extends HttpServlet {
 		// get students from db util
 		List<Student> students = studentDbUtil.getStudents();
 		
+		// add students to the request
+		request.setAttribute("STUDENT_LIST", students);
+		
 	}
 
 }
