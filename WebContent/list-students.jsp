@@ -24,6 +24,14 @@
 						<th>Last Name</th>
 						<th>Email</th>
 					</tr>
+					
+					<% for (Student tempStudent : theStudents) { %>
+						<tr>
+							<td> <%= tempStudent.getFirstName() %> </td>
+							<td> <%= tempStudent.getLastName() %> </td>
+							<td> <%= tempStudent.getEmail() %> </td>
+						</tr>
+					<% } %>
 				</table>
 			</div>
 		</div>
