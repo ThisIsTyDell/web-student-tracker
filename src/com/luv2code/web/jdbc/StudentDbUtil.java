@@ -24,6 +24,16 @@ public class StudentDbUtil {
 		Statement myStmt = null;
 		ResultSet myRs = null;
 		
-		return students;
+		
+		try {
+			// get a connection
+			myConn = dataSource.getConnection();
+			
+			return students;
+		}
+		finally {
+			
+		}
+		
 	}
 }
