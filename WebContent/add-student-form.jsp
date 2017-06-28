@@ -26,6 +26,14 @@
 							<td><label>First name:</label></td>
 							<td><input type="text" name="firstName" /></td>
 						</tr>
+						<tr>
+							<td><label>Last name:</label></td>
+							<td><input type="text" name="lastName" /></td>
+						</tr>
+						<tr>
+							<td><label>Email:</label></td>
+							<td><input type="text" name="email" /></td>
+						</tr>
 					</tbody>
 				</table>
 			</form>
