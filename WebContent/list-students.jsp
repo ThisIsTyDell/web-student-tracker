@@ -1,4 +1,3 @@
-<%@ page import="java.util.*, com.luv2code.web.jdbc.*" %>
 <!DOCTYPE html>
 <html>
 	<head>
