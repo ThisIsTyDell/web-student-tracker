@@ -37,6 +37,16 @@ public class StudentDbUtil {
 			// execute query
 			myRs = myStmt.executeQuery(sql);
 			
+			// process result set
+			while (myRs.next()) {
+				
+				// retrieve data from result set row
+				
+				// create new student object
+				
+				// add it to the list of students
+			}
+			
 			return students;
 		}
 		finally {
