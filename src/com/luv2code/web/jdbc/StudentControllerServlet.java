@@ -61,6 +61,10 @@ public class StudentControllerServlet extends HttpServlet {
 					addStudent(request, response);
 					break;
 					
+				case "LOAD":
+					loadStudent(request, response);
+					break;
+					
 				default:
 					listStudents(request, response);
 			}
@@ -71,6 +75,11 @@ public class StudentControllerServlet extends HttpServlet {
 		catch (Exception exc) {
 			throw new ServletException(exc);
 		}
+		
+	}
+
+	private void loadStudent(HttpServletRequest request, HttpServletResponse response) {
+		// TODO Auto-generated method stub
 		
 	}
 
