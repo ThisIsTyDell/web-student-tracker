@@ -139,6 +139,19 @@ public class StudentDbUtil {
 			// execute statement
 			myRs = myStmt.executeQuery();
 			
+			// retrieve data from result set row
+			if (myRs.next()) {
+				String firstName = myRs.getString("first_name");
+				String lastName = myRs.getString("last_name");
+				String email = myRs.getString("email");
+				
+				// use the studentId during construction
+				theStudent = new Student(studentId, firstName, lastName, email);
+			}
+			else {
+				throw new Exception("Could not find student id:" + studentId);
+			}
+			
 			return theStudent;
 		}
 		finally {
