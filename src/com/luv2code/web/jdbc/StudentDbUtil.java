@@ -110,4 +110,16 @@ public class StudentDbUtil {
 			close(myConn, myStmt, null);
 		}
 	}
+
+	public Student getStudent(String theStudentId) {
+		
+		Student theStudent = null;
+		
+		Connection myConn = null;
+		PreparedStatement myStmt = null;
+		ResultSet myRs = null;
+		int studentId;
+		
+		return theStudent;
+	}
 }
