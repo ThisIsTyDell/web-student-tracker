@@ -86,6 +86,18 @@ public class StudentControllerServlet extends HttpServlet {
 		
 	}
 
+	private void deleteStudent(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		// read student id from form data
+		String theStudentId = request.getParameter("studentId");
+		
+		// delete student from database
+		studentDbUtil.deleteStudent(theStudentId);
+		
+		// send them back to "list students" page
+		listStudents(request, response);
+		
+	}
+
 	private void updateStudent(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
 		// read student info from form data
