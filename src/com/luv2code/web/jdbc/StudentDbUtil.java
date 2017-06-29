@@ -220,6 +220,5 @@ public class StudentDbUtil {
 			// close JDBC objects
 			close(myConn, myStmt, null);
 		}
-		
 	}
 }
