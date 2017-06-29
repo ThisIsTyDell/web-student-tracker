@@ -29,11 +29,16 @@
 					</tr>
 					
 					<c:forEach var="tempStudent" items="${STUDENT_LIST}">
+						<!-- set up a link for each student -->
+						<c:url var="tempLink" value="StudentControllerServlet">
+							<c:param name="command" value="LOAD" />
+							<c:param name="studentId" value="${tempStudent.id}" />
+						</c:url>
 						<tr>
 							<td> ${tempStudent.firstName} </td>
 							<td> ${tempStudent.lastName} </td>
 							<td> ${tempStudent.email} </td>
-							<td> todo: add a link here </td>
+							<td> <a href="${tempLink}">Update</a> </td>
 						</tr>
 					</c:forEach>
 				</table>
