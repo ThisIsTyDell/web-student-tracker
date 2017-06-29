@@ -120,6 +120,16 @@ public class StudentDbUtil {
 		ResultSet myRs = null;
 		int studentId;
 		
-		return theStudent;
+		try {
+			// convert student id to int
+			studentId = Integer.parseInt(theStudentId);
+			
+			return theStudent;
+		}
+		finally {
+			
+		}
+		
+		
 	}
 }
