@@ -136,6 +136,9 @@ public class StudentDbUtil {
 			// set params
 			myStmt.setInt(1, studentId);
 			
+			// execute statement
+			myRs = myStmt.executeQuery();
+			
 			return theStudent;
 		}
 		finally {
