@@ -127,6 +127,10 @@ public class StudentDbUtil {
 			// get the connection to database
 			myConn = dataSource.getConnection();
 			
+			// create sql to get selected student
+			String sql = "select * from student where id=?";
+			
+			
 			return theStudent;
 		}
 		finally {
