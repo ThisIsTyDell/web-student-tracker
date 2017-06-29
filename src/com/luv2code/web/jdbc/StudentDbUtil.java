@@ -205,7 +205,7 @@ public class StudentDbUtil {
 			myConn = dataSource.getConnection();
 			
 			// create sql to delete student
-			String sql = "delet from student where id=?";
+			String sql = "delete from student where id=?";
 			
 			// prepare statement
 			myStmt = myConn.prepareStatement(sql);
