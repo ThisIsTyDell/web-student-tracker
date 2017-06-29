@@ -111,7 +111,7 @@ public class StudentDbUtil {
 		}
 	}
 
-	public Student getStudent(String theStudentId) {
+	public Student getStudent(String theStudentId) throws Exception {
 		
 		Student theStudent = null;
 		
