@@ -155,7 +155,8 @@ public class StudentDbUtil {
 			return theStudent;
 		}
 		finally {
-			
+			// clean up JDBC objects
+			close(myConn, myStmt, myRs);
 		}
 		
 		
