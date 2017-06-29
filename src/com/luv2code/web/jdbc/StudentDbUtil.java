@@ -161,4 +161,9 @@ public class StudentDbUtil {
 		
 		
 	}
+
+	public void updateStudent(Student theStudent) {
+		// do nothing for now
+		
+	}
 }
