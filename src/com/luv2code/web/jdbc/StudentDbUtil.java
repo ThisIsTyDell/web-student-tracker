@@ -124,6 +124,9 @@ public class StudentDbUtil {
 			// convert student id to int
 			studentId = Integer.parseInt(theStudentId);
 			
+			// get the connection to database
+			myConn = dataSource.getConnection();
+			
 			return theStudent;
 		}
 		finally {
