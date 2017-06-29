@@ -130,6 +130,9 @@ public class StudentDbUtil {
 			// create sql to get selected student
 			String sql = "select * from student where id=?";
 			
+			// create prepared statement
+			myStmt = myConn.prepareStatement(sql);
+			
 			
 			return theStudent;
 		}
