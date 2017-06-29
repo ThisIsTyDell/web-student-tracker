@@ -86,6 +86,9 @@ public class StudentControllerServlet extends HttpServlet {
 		
 		// read student info from form data
 		int id = Integer.parseInt(request.getParameter("studentId"));
+		String firstName = request.getParameter("firstName");
+		String lastName = request.getParameter("lastName");
+		String email = request.getParameter("email");
 		
 	}
 
