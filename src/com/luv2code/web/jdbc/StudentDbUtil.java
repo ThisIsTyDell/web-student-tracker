@@ -133,6 +133,8 @@ public class StudentDbUtil {
 			// create prepared statement
 			myStmt = myConn.prepareStatement(sql);
 			
+			// set params
+			myStmt.setInt(1, studentId);
 			
 			return theStudent;
 		}
