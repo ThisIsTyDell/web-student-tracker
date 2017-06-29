@@ -90,6 +90,9 @@ public class StudentControllerServlet extends HttpServlet {
 		String lastName = request.getParameter("lastName");
 		String email = request.getParameter("email");
 		
+		// create a new student object
+		Student theStudent = new Student(id, firstName, lastName, email);
+		
 	}
 
 	private void loadStudent(HttpServletRequest request, HttpServletResponse response) throws Exception {
